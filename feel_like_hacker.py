@@ -4,6 +4,7 @@ import os
 import time
 from random import shuffle
 from countfileline import getnumline#this is a user built module to count total number of line
+
 def get_total_pyfile():
 	total_file=os.listdir('/storage/emulated/0')#you have to give your reposatry name 
 	text_files_list=[]
@@ -21,8 +22,12 @@ def get_hackcode():
 		with open(f'/storage/emulated/0/{file_py[kl]}') as opf:#this will open an file acording to its index
 			for jj in range(0,file_line+1):
 				line_read=opf.readline()#it will read all line one by one 
-				print('\033[32m'+line_read)#This '\033[32m' will turn your text into green wow
-				time.sleep(1)
+				if "#" in line_read:
+					print('\033[31m'+line_read)#This'\033[32m' will turn your text into green wow
+				elif "import" in line_read:
+					print("\033[94m"+line_read)
+				else:
+					print( '\033[92m' +line_read)
+				time.sleep(0.1)
 get_hackcode()
-print( "         YOU HAVE BEEN HACKED BROOOO")
-	
+print( "         YOU HAVE BEEN HACKED BROOOO")	
