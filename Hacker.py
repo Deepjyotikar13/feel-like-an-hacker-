@@ -21,4 +21,4 @@ def hacker(diractory):
 				else:
 					print('\033[92m'+read_line)#this will be green
 				time.sleep(00.1)#for some delay
-hacker("/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/")#you can give your diractory and spacific diractris also
+hacker("/data/user/0/ru.iiec.pydroid3/files/aarch64-linux-android/lib/python3.9/")#you have to give your diractory where your python file is stored but if you don't have python file but have other files like Javascript Or C then you have to give file.endswith(.js) or other extansgon as you have
